@@ -23,8 +23,16 @@ object BehaviorAndState extends App {
 
   // 액터 시스템 내부에 액터를 생성함
   // val actor = actorSystem.actorOf(Props[SummingActor])
-  val actor = actorSystem.actorOf(Props(classOf[SummingActorWithConstructor], 10), "summing-actor")
+  val actor = actorSystem.actorOf(Props(classOf[SummingActorWithConstructor], 0), "summing-actor")
 
   // 액터의 경로를 인쇄함
   println(actor.path)
+
+  // 덧셈 메시지 전송
+  for (_ <- 1 to 10) {
+    actor ! 1
+  }
+
+  // 오류 메시지 전송
+  actor ! "hello word"
 }

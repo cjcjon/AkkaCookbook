@@ -1,11 +1,8 @@
 package com.packt.chapter2
 
-import akka.actor.SupervisorStrategy.{Escalate, Restart}
-import akka.actor.{Actor, ActorSystem, OneForOneStrategy, Props}
+import akka.actor.{Actor, ActorSystem, Props}
 
-import scala.concurrent.duration.DurationInt
 import scala.language.postfixOps
-
 
 case object CreateChild
 case class Greet(msg: String)

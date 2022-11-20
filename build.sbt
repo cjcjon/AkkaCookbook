@@ -13,6 +13,7 @@ lazy val root = (project in file("."))
       "com.typesafe.akka" %% "akka-testkit" % AkkaVersion,
       "com.typesafe.akka" %% "akka-persistence" % AkkaVersion,
       "com.typesafe.akka" %% "akka-persistence-testkit" % AkkaVersion % Test,
-      "com.typesafe.akka" %% "akka-serialization-jackson" % AkkaVersion
+      "com.typesafe.akka" %% "akka-serialization-jackson" % AkkaVersion,
+      "com.typesafe.akka" %% "akka-remote" % AkkaVersion
     )
   )
